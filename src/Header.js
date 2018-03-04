@@ -4,9 +4,9 @@ import { withStyles } from "material-ui/styles";
 import AppBar from "material-ui/AppBar";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
-import IconButton from 'material-ui/IconButton';
-import MenuIcon from 'material-ui-icons/Menu';
-import Button from 'material-ui/Button';
+import IconButton from "material-ui/IconButton";
+import MenuIcon from "material-ui-icons/Menu";
+import Button from "material-ui/Button";
 import { Link } from "react-router-dom";
 
 const styles = {
@@ -28,28 +28,53 @@ class Header extends Component {
 
     return (
       <div>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="title" color="inherit" className={classes.flex}>
-              Elias Homes LTD
-            </Typography>
-            <Button>
-              <Link to={`/`}>Home</Link>
-            </Button>
-            <Button>
-              <Link to={`/about`}>About</Link>
-            </Button>
-            <Button>
-              <Link to={`/portfolio`}>Portfolio</Link>
-            </Button>
-            <Button>
-              <Link to={`/contact`}>Contact</Link>
-            </Button>
-          </Toolbar>
-        </AppBar>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">
+            <img
+              src="/favicon.ico"
+              width="30"
+              height="30"
+              class="d-inline-block align-top"
+              alt=""
+            />
+            Elias Homes LTD
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <Link className="nav-link" to={`/`}>
+                  Home
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to={`/about`}>
+                  About
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to={`/portfolio`}>
+                  Portfolio
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link" to={`/contact`}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     );
   }
