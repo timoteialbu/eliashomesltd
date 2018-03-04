@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
-import PageNotFound from './PageNotFound'
-import About from './About';
-import Home from './Home';
-import Contact from './Contact';
-import Portfolio from './Portfolio';
-import Header from './Header';
+import PageNotFound from "./PageNotFound";
+import About from "./About";
+import Home from "./Home";
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
+import Header from "./Header";
+import Footer from "./Footer";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path={`/contact`} component={Contact} />
             <Route component={PageNotFound} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     );
