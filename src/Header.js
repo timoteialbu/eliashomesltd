@@ -5,7 +5,7 @@ import AppBar from "material-ui/AppBar";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
 import IconButton from "material-ui/IconButton";
-import MenuIcon from "material-ui-icons/Menu";
+import Home from "material-ui-icons/Home";
 import Button from "material-ui/Button";
 import { Link } from "react-router-dom";
 
@@ -28,19 +28,13 @@ class Header extends Component {
 
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            <img
-              src="/favicon.ico"
-              width="30"
-              height="30"
-              class="d-inline-block align-top"
-              alt=""
-            />
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <a className="navbar-brand" href="#">
+            <Home className="d-inline-block align-top" />
             Elias Homes LTD
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -48,26 +42,26 @@ class Header extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" />
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
                 <Link className="nav-link" to={`/`}>
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to={`/about`}>
                   About
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to={`/portfolio`}>
                   Portfolio
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link className="nav-link" to={`/contact`}>
                   Contact
                 </Link>
