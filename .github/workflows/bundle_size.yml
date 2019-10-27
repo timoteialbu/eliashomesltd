@@ -8,7 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
+    - name: Build
+      uses: actions/yarn@master
+      with:
+        args: install
     - uses: mikeal/bundle-size-action@master
     - uses: mikeal/publish-to-github-action@master
       env:
