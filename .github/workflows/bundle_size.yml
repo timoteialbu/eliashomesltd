@@ -4,20 +4,19 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
-    - name: Install
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        args: install
-    - name: Build
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        args: build
-    - uses: mikeal/bundle-size-action@master
-    - uses: mikeal/publish-to-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@master
+      - name: Install
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          args: install
+      - name: Build
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          args: build
+      - uses: mikeal/bundle-size-action@master
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

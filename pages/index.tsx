@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import 'tailwindcss/tailwind.css'
+import Link from "next/link";
+import Layout from "../components/Layout";
+import "tailwindcss/tailwind.css";
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
@@ -11,6 +11,6 @@ const IndexPage = () => (
       </Link>
     </p>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
