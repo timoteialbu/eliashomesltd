@@ -1,6 +1,5 @@
 aws rekognition detect-labels --image '{\"S3Object\":{\"Bucket\":\"eliashomesltd.com\",\"Name\":\"images/img/1/b_2.JPG\"}}'
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
