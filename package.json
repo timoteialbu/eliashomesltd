@@ -1,0 +1,45 @@
+{
+  "name": "eliashomesltd",
+  "version": "1.0.0",
+  "description": "A website for Elias Homes Ltd",
+  "homepage": "https://github.com/timoteialbu/eliashomesltd",
+  "bugs": {
+    "url": "https://github.com/timoteialbu/eliashomesltd/issues"
+  },
+  "author": "Timotei Albu <timotei.albu@gmail.com> (https://timoteialbu.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoteialbu/eliashomesltd.git"
+  },
+  "files": [
+    "dist",
+    "public"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "check-format": "prettier --check .",
+    "ci": "pnpm build && pnpm check-format",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.58.3",
+    "@tanstack/start": "^1.58.5",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vinxi": "^0.4.3"
+  }
+}
