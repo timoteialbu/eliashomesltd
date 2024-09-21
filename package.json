@@ -1,0 +1,17 @@
+{
+  "name": "eliashomesltd",
+  "version": "1.0.0",
+  "description": "A website for Elias Homes Ltd",
+  "homepage": "https://github.com/timoteialbu/eliashomesltd",
+  "bugs": {
+    "url": "https://github.com/timoteialbu/eliashomesltd/issues"
+  },
+  "author": "Timotei Albu <timotei.albu@gmail.com> (https://timoteialbu.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoteialbu/eliashomesltd.git"
+  },
+  "files": ["dist", "public"],
+  "type": "module",
+  "license": "MIT"
+}
