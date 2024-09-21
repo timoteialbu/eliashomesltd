@@ -17,8 +17,6 @@
 
     /* If transpiling with TypeScript: */
     "module": "ESNext",
-    "outDir": "dist",
-    "rootDir": "src",
     "sourceMap": true,
     "noEmit": true,
     "jsx": "react-jsx",
