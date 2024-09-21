@@ -1,5 +1,5 @@
-import { createFileRoute, useRouter } from '@tanstack/react-router'
-
+import "./index.css";
+import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -7,6 +7,8 @@ export const Route = createFileRoute('/')({
 
 function Home() {
   return (
-   <div>Hello World</div>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
   )
 }
