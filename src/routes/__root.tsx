@@ -1,6 +1,8 @@
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { Suspense } from "react";
 import React from "react";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 const TanStackRouterDevtools = import.meta.env.PROD
   ? () => null // Render nothing in production
@@ -16,19 +18,12 @@ const TanStackRouterDevtools = import.meta.env.PROD
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="flex gap-2 p-2">
-        <Link to="/" className="[&.active]:font-bold">
-          Home
-        </Link>{" "}
-        <Link to="/about" className="[&.active]:font-bold">
-          About
-        </Link>
-      </div>
-      <hr />
+      <Header />
       <Outlet />
       <Suspense>
         <TanStackRouterDevtools />
       </Suspense>
+      <Footer />
     </>
   ),
 });
