@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "pnpm run --parallel /^dev:.*/",
-    "dev:server": "TZ=UTC vite",
+    "dev:server": "vite",
     "dev:check:types": "tsc --watch",
     "build": "tsc -b && vite build",
     "format": "prettier . --write --list-different",
@@ -15,9 +15,11 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.14",
     "@tanstack/react-router": "^1.99.13",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
     "@eslint/compat": "1.2.6",
@@ -58,5 +60,6 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown --cache --list-different"
-  }
+  },
+  "packageManager": "pnpm@10.6.4"
 }
