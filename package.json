@@ -1,12 +1,12 @@
 {
   "name": "eliashomesltd",
   "private": true,
-  "version": "0.0.0",
+  "sideEffects": false,
+  "type": "module",
   "scripts": {
-    "dev": "pnpm run --parallel /^dev:.*/",
-    "dev:server": "vite",
-    "dev:check:types": "tsc --watch",
-    "build": "tsc -b && vite build",
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
     "format": "prettier . --write --list-different",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -15,11 +15,14 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/vite": "^4.0.14",
-    "@tanstack/react-router": "^1.99.13",
+    "@tanstack/react-router": "^1.114.25",
+    "@tanstack/react-start": "^1.114.25",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.0.14",
+    "vinxi": "^0.5.3"
   },
   "devDependencies": {
     "@eslint/compat": "1.2.6",
@@ -56,6 +59,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.23.0",
     "vite": "^6.1.0",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.5"
   },
   "lint-staged": {

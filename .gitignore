@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.cache
+.env
+.output
+.vinxi
+
+/build/
+/api/
+/server/build
+/public/build
+.vinxi
