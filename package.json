@@ -9,7 +9,7 @@
     "start": "vinxi start",
     "format": "prettier . --write --list-different",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "nx vite:preview",
     "generate": "tanstack-router generate",
     "watch": "tanstack-router watch",
     "prepare": "husky"
@@ -28,11 +28,15 @@
     "@eslint/compat": "1.2.6",
     "@eslint/eslintrc": "3.2.0",
     "@eslint/js": "^9.20.0",
+    "@nx/eslint": "21.3.0",
+    "@nx/vite": "21.3.0",
+    "@nx/web": "21.3.0",
     "@tanstack/router-devtools": "^1.99.13",
     "@tanstack/router-plugin": "^1.99.14",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/ui": "^3.0.0",
     "eslint": "^9.20.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-import-resolver-node": "^0.3.9",
@@ -52,7 +56,9 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
+    "jiti": "2.4.2",
     "lint-staged": "^15.4.3",
+    "nx": "21.3.0",
     "prettier": "3.5.0",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.6.11",
@@ -65,5 +71,6 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown --cache --list-different"
   },
-  "packageManager": "pnpm@10.6.4"
+  "packageManager": "pnpm@10.6.4",
+  "nx": {}
 }

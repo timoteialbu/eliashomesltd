@@ -47,6 +47,8 @@ export default [
       "*.config.js",
       "*.generated.*",
       "prettier.config.cjs",
+      "**/vite.config.*.timestamp*",
+      "**/vitest.config.*.timestamp*",
     ],
   },
   eslintConfigPrettier,
