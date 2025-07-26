@@ -11,7 +11,7 @@ function Contact() {
       <div className="mx-auto max-w-xl">
         <form className="space-y-6">
           <div>
-            <label className="mb-2 block text-gray-700" htmlFor="name">
+            <label className="text-brand-gray mb-2 block" htmlFor="name">
               Name
             </label>
             <input
@@ -22,7 +22,7 @@ function Contact() {
             />
           </div>
           <div>
-            <label className="mb-2 block text-gray-700" htmlFor="email">
+            <label className="text-brand-gray mb-2 block" htmlFor="email">
               Email
             </label>
             <input
@@ -33,7 +33,7 @@ function Contact() {
             />
           </div>
           <div>
-            <label className="mb-2 block text-gray-700" htmlFor="message">
+            <label className="text-brand-gray mb-2 block" htmlFor="message">
               Message
             </label>
             <textarea
@@ -44,7 +44,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+            className="bg-accent hover:bg-opacity-90 w-full rounded-lg py-3 font-semibold text-white transition-colors"
           >
             Send Message
           </button>

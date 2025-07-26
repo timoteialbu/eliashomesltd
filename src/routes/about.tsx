@@ -11,13 +11,13 @@ function About() {
 
       {/* Company Story */}
       <div className="mx-auto mb-16 max-w-3xl">
-        <p className="mb-6 text-lg text-gray-600">
+        <p className="text-brand-gray mb-6 text-lg">
           With over 15 years of experience in professional tile setting, Elias
           Homes has established itself as a leader in residential and commercial
           tile installation. Our commitment to quality and attention to detail
           sets us apart in the industry.
         </p>
-        <p className="text-lg text-gray-600">
+        <p className="text-brand-gray text-lg">
           We take pride in transforming spaces with expert craftsmanship and
           innovative design solutions. Every project is handled with the utmost
           care and precision, ensuring lasting beauty and durability.
@@ -35,16 +35,16 @@ function About() {
             key={stat.label}
             className="rounded-lg bg-white p-6 text-center shadow-lg"
           >
-            <div className="mb-2 text-4xl font-bold text-blue-600">
+            <div className="text-accent mb-2 text-4xl font-bold">
               {stat.number}
             </div>
-            <div className="text-gray-600">{stat.label}</div>
+            <div className="text-brand-gray">{stat.label}</div>
           </div>
         ))}
       </div>
 
       {/* Why Choose Us */}
-      <div className="rounded-xl bg-gray-50 p-8">
+      <div className="bg-brand-off-white rounded-xl p-8">
         <h2 className="mb-8 text-center text-3xl font-bold">Why Choose Us</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {[
@@ -71,7 +71,7 @@ function About() {
           ].map((feature) => (
             <div key={feature.title} className="rounded-lg bg-white p-6 shadow">
               <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-brand-gray">{feature.description}</p>
             </div>
           ))}
         </div>

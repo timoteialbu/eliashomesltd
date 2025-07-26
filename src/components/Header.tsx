@@ -5,11 +5,11 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed z-50 w-full bg-white/95 shadow-sm backdrop-blur-sm">
+    <header className="bg-brand-off-white/95 fixed z-50 w-full shadow-sm backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-600">
+          <Link to="/" className="text-primary text-2xl font-bold">
             Elias Homes
           </Link>
 
@@ -17,31 +17,31 @@ export function Header() {
           <nav className="hidden space-x-8 md:flex">
             <Link
               to="/"
-              className="text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary transition-colors"
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary transition-colors"
             >
               Services
             </Link>
             <Link
               to="/portfolio"
-              className="text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary transition-colors"
             >
               Portfolio
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary transition-colors"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary transition-colors"
             >
               Contact
             </Link>
@@ -75,35 +75,35 @@ export function Header() {
           <nav className="space-y-4 py-4 md:hidden">
             <Link
               to="/"
-              className="block text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary block transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="block text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary block transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               to="/portfolio"
-              className="block text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary block transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Portfolio
             </Link>
             <Link
               to="/about"
-              className="block text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary block transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="block text-gray-700 transition-colors hover:text-blue-600"
+              className="text-brand-gray hover:text-primary block transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
