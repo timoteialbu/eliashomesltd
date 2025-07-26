@@ -8,90 +8,38 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as ServicesRouteImport } from "./routes/services";
+import { Route as PortfolioRouteImport } from "./routes/portfolio";
+import { Route as ContactRouteImport } from "./routes/contact";
+import { Route as AboutRouteImport } from "./routes/about";
+import { Route as IndexRouteImport } from "./routes/index";
 
-import { Route as rootRoute } from "./routes/__root";
-import { Route as ServicesImport } from "./routes/services";
-import { Route as PortfolioImport } from "./routes/portfolio";
-import { Route as ContactImport } from "./routes/contact";
-import { Route as AboutImport } from "./routes/about";
-import { Route as IndexImport } from "./routes/index";
-
-// Create/Update Routes
-
-const ServicesRoute = ServicesImport.update({
+const ServicesRoute = ServicesRouteImport.update({
   id: "/services",
   path: "/services",
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-const PortfolioRoute = PortfolioImport.update({
+const PortfolioRoute = PortfolioRouteImport.update({
   id: "/portfolio",
   path: "/portfolio",
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-const ContactRoute = ContactImport.update({
+const ContactRoute = ContactRouteImport.update({
   id: "/contact",
   path: "/contact",
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-const AboutRoute = AboutImport.update({
+const AboutRoute = AboutRouteImport.update({
   id: "/about",
   path: "/about",
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-const IndexRoute = IndexImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: "/",
   path: "/",
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-// Populate the FileRoutesByPath interface
-
-declare module "@tanstack/react-router" {
-  interface FileRoutesByPath {
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/about": {
-      id: "/about";
-      path: "/about";
-      fullPath: "/about";
-      preLoaderRoute: typeof AboutImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/contact": {
-      id: "/contact";
-      path: "/contact";
-      fullPath: "/contact";
-      preLoaderRoute: typeof ContactImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/portfolio": {
-      id: "/portfolio";
-      path: "/portfolio";
-      fullPath: "/portfolio";
-      preLoaderRoute: typeof PortfolioImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/services": {
-      id: "/services";
-      path: "/services";
-      fullPath: "/services";
-      preLoaderRoute: typeof ServicesImport;
-      parentRoute: typeof rootRoute;
-    };
-  }
-}
-
-// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute;
@@ -100,7 +48,6 @@ export interface FileRoutesByFullPath {
   "/portfolio": typeof PortfolioRoute;
   "/services": typeof ServicesRoute;
 }
-
 export interface FileRoutesByTo {
   "/": typeof IndexRoute;
   "/about": typeof AboutRoute;
@@ -108,16 +55,14 @@ export interface FileRoutesByTo {
   "/portfolio": typeof PortfolioRoute;
   "/services": typeof ServicesRoute;
 }
-
 export interface FileRoutesById {
-  __root__: typeof rootRoute;
+  __root__: typeof rootRouteImport;
   "/": typeof IndexRoute;
   "/about": typeof AboutRoute;
   "/contact": typeof ContactRoute;
   "/portfolio": typeof PortfolioRoute;
   "/services": typeof ServicesRoute;
 }
-
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths: "/" | "/about" | "/contact" | "/portfolio" | "/services";
@@ -126,13 +71,52 @@ export interface FileRouteTypes {
   id: "__root__" | "/" | "/about" | "/contact" | "/portfolio" | "/services";
   fileRoutesById: FileRoutesById;
 }
-
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute;
   AboutRoute: typeof AboutRoute;
   ContactRoute: typeof ContactRoute;
   PortfolioRoute: typeof PortfolioRoute;
   ServicesRoute: typeof ServicesRoute;
+}
+
+declare module "@tanstack/react-router" {
+  interface FileRoutesByPath {
+    "/services": {
+      id: "/services";
+      path: "/services";
+      fullPath: "/services";
+      preLoaderRoute: typeof ServicesRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/portfolio": {
+      id: "/portfolio";
+      path: "/portfolio";
+      fullPath: "/portfolio";
+      preLoaderRoute: typeof PortfolioRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/contact": {
+      id: "/contact";
+      path: "/contact";
+      fullPath: "/contact";
+      preLoaderRoute: typeof ContactRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/about": {
+      id: "/about";
+      path: "/about";
+      fullPath: "/about";
+      preLoaderRoute: typeof AboutRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -142,39 +126,6 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   ServicesRoute: ServicesRoute,
 };
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>();
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/about",
-        "/contact",
-        "/portfolio",
-        "/services"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/about": {
-      "filePath": "about.tsx"
-    },
-    "/contact": {
-      "filePath": "contact.tsx"
-    },
-    "/portfolio": {
-      "filePath": "portfolio.tsx"
-    },
-    "/services": {
-      "filePath": "services.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */

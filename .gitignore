@@ -32,7 +32,8 @@ dist-ssr
 /api/
 /server/build
 /public/build
-.vinxi
+.tanstack
+.nitro
 
 
 .nx/cache

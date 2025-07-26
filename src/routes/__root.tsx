@@ -1,10 +1,15 @@
-import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { Outlet } from "@tanstack/react-router";
-import * as React from "react";
-import globalsCss from "~/styles/globals.css?url";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+// src/routes/__root.tsx
+/// <reference types="vite/client" />
+import {
+  createRootRoute,
+  HeadContent,
+  Outlet,
+  Scripts,
+} from "@tanstack/react-router";
+import type { ReactNode } from "react";
+import { Footer } from "~/components/Footer";
+import { Header } from "~/components/Header";
+import appCss from "../styles/app.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -17,14 +22,10 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        name: "description",
-        content: "Elias Homes Ltd is a professional tile setting company",
-      },
-      {
-        title: "Elias Homes Ltd",
+        title: "TanStack Start Starter",
       },
     ],
-    links: [{ rel: "stylesheet", href: globalsCss }],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   component: RootComponent,
 });
@@ -35,12 +36,11 @@ function RootComponent() {
       <Header />
       <Outlet />
       <Footer />
-      <TanStackRouterDevtools position="bottom-right" />
     </RootDocument>
   );
 }
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html>
       <head>

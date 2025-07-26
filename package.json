@@ -4,9 +4,9 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start",
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "vite start",
     "format": "prettier . --write --list-different",
     "lint": "eslint .",
     "preview": "nx vite:preview",
@@ -17,12 +17,13 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/vite": "^4.0.14",
-    "@tanstack/react-router": "^1.114.25",
-    "@tanstack/react-start": "^1.114.25",
+    "@tanstack/react-router": "^1.130.0",
+    "@tanstack/react-router-devtools": "^1.130.0",
+    "@tanstack/react-start": "^1.130.0",
+    "@tanstack/react-store": "^0.7.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.14",
-    "vinxi": "^0.5.3"
+    "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
     "@eslint/compat": "1.2.6",
@@ -31,8 +32,6 @@
     "@nx/eslint": "21.3.0",
     "@nx/vite": "21.3.0",
     "@nx/web": "21.3.0",
-    "@tanstack/router-devtools": "^1.99.13",
-    "@tanstack/router-plugin": "^1.99.14",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
@@ -56,20 +55,20 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
-    "jiti": "2.4.2",
     "lint-staged": "^15.4.3",
     "nx": "21.3.0",
     "prettier": "3.5.0",
     "prettier-plugin-css-order": "2.1.2",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "typescript": "~5.7.2",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.23.0",
-    "vite": "^6.1.0",
+    "vite": "^7.0.6",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.5"
+    "vitest": "^3.2.4"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown --cache --list-different"
+    "**/*.{js,jsx,ts,tsx}": "eslint --fix",
+    "**/*": "prettier --write --ignore-unknown"
   },
   "packageManager": "pnpm@10.6.4",
   "nx": {}
