@@ -71,6 +71,6 @@
     "**/*.{js,jsx,ts,tsx}": "eslint --fix",
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.6.4",
+  "packageManager": "pnpm@10.13.1",
   "nx": {}
 }
