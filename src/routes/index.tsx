@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import AnimatedHeroBackground from "../components/AnimatedHeroBackground";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -9,9 +10,10 @@ function Index() {
     <div className="bg-brand-off-white min-h-screen">
       {/* Hero Section */}
       <section className="bg-primary relative h-[80vh]">
+        <AnimatedHeroBackground />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative container mx-auto flex h-full items-center px-4">
-          <div className="max-w-2xl text-white">
+          <div className="relative z-10 max-w-2xl text-white">
             <h1 className="mb-4 text-5xl font-bold">
               Transform Your Space with Expert Tile Setting
             </h1>
