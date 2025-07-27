@@ -14,9 +14,6 @@ export default defineConfig({
     }),
     tanstackStart({
       customViteReactPlugin: true,
-      spa: {
-        enabled: true,
-      },
     }),
     viteReact(),
     tailwindcss(),
