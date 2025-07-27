@@ -42,3 +42,9 @@ dist-ssr
 .github/instructions/nx.instructions.md
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+
+# Terraform
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
