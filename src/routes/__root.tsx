@@ -22,7 +22,7 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "Elias Homes Ltd - Professional Tile Setting Services",
       },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
