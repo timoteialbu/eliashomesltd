@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import Logo from "~/assets/ehltd-logo-white-text.png";
 
 export function Footer() {
   return (
@@ -7,7 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Company Info */}
           <div>
-            <h3 className="mb-4 text-xl font-bold text-white">Elias Homes</h3>
+            <h3 className="mb-4 text-xl font-bold text-white">
+              <img src={Logo} alt="Elias Homes Ltd." className="h-24 w-auto" />
+            </h3>
             <p className="mb-4">
               Professional tile setting and installation services in your area.
               Quality craftsmanship for your home and business.
@@ -41,7 +44,6 @@ export function Footer() {
               </a>
             </div>
           </div>
-
           {/* Quick Links */}
           <div>
             <h3 className="mb-4 text-xl font-bold text-white">Quick Links</h3>
@@ -78,7 +80,6 @@ export function Footer() {
               </Link>
             </nav>
           </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="mb-4 text-xl font-bold text-white">Contact Us</h3>
@@ -135,7 +136,8 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-brand-gray mt-12 border-t pt-8 text-center">
           <p>
-            &copy; {new Date().getFullYear()} Elias Homes. All rights reserved.
+            &copy; {new Date().getFullYear()} Elias Homes Ltd. All rights
+            reserved.
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import Logo from "~/assets/ehltd-logo.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,10 +8,10 @@ export function Header() {
   return (
     <header className="bg-brand-off-white/95 fixed z-50 w-full shadow-sm backdrop-blur-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="text-primary text-2xl font-bold">
-            Elias Homes
+            <img src={Logo} alt="Elias Homes Ltd." className="h-24 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

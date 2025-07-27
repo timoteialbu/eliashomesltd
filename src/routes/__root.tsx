@@ -34,7 +34,9 @@ function RootComponent() {
   return (
     <RootDocument>
       <Header />
-      <Outlet />
+      <main className="pt-24">
+        <Outlet />
+      </main>
       <Footer />
     </RootDocument>
   );
