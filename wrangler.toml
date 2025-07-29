@@ -3,5 +3,9 @@ main = "./.output/server/index.mjs"
 compatibility_flags = ["nodejs_compat"]
 compatibility_date = "2025-04-14"
 
+[[send_email]]
+name = "contact_email_sender"
+destination_address = "contact@timotei.dev"
+
 [assets]
 directory = "./.output/public/"

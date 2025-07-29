@@ -28,6 +28,9 @@ importers:
       framer-motion:
         specifier: ^12.23.9
         version: 12.23.9(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      mimetext:
+        specifier: ^3.0.27
+        version: 3.0.27
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1091,6 +1094,13 @@ packages:
     engines: { node: ">=6.9.0" }
     peerDependencies:
       "@babel/core": ^7.0.0-0
+
+  "@babel/runtime-corejs3@7.28.2":
+    resolution:
+      {
+        integrity: sha512-FVFaVs2/dZgD3Y9ZD+AKNKjyGKzwu0C54laAXWUXgLcVXcCX6YZ6GhK2cp7FogSN2OA0Fu+QT8dP3FUdo9ShSQ==,
+      }
+    engines: { node: ">=6.9.0" }
 
   "@babel/runtime@7.27.6":
     resolution:
@@ -4460,6 +4470,12 @@ packages:
         integrity: sha512-JepmAj2zfl6ogy34qfWtcE7nHKAJnKsQFRn++scjVS2bZFllwptzw61BZcZFYBPpUznLfAvh0LGhxKppk04ClA==,
       }
 
+  core-js-pure@3.44.0:
+    resolution:
+      {
+        integrity: sha512-gvMQAGB4dfVUxpYD0k3Fq8J+n5bB6Ytl15lqlZrOIXFzxOhtPaObfkQGHtMRdyjIf7z2IeNULwi1jEwyS+ltKQ==,
+      }
+
   core-util-is@1.0.3:
     resolution:
       {
@@ -6628,6 +6644,12 @@ packages:
       }
     hasBin: true
 
+  js-base64@3.7.7:
+    resolution:
+      {
+        integrity: sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==,
+      }
+
   js-tokens@4.0.0:
     resolution:
       {
@@ -7167,6 +7189,12 @@ packages:
       }
     engines: { node: ">=16" }
     hasBin: true
+
+  mimetext@3.0.27:
+    resolution:
+      {
+        integrity: sha512-mUhWAsZD1N/K6dbN4+a5Yq78OPnYQw1ubOSMasBntsLQ2S7KVNlvDEA8dwpr4a7PszWMzeslKahAprtwYMgaBA==,
+      }
 
   mimic-fn@2.1.0:
     resolution:
@@ -10785,6 +10813,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  "@babel/runtime-corejs3@7.28.2":
+    dependencies:
+      core-js-pure: 3.44.0
+
   "@babel/runtime@7.27.6": {}
 
   "@babel/template@7.26.8":
@@ -13036,6 +13068,8 @@ snapshots:
     dependencies:
       browserslist: 4.25.1
 
+  core-js-pure@3.44.0: {}
+
   core-util-is@1.0.3: {}
 
   corser@2.0.1: {}
@@ -14473,6 +14507,8 @@ snapshots:
 
   jiti@2.4.2: {}
 
+  js-base64@3.7.7: {}
+
   js-tokens@4.0.0: {}
 
   js-tokens@9.0.1: {}
@@ -14756,6 +14792,13 @@ snapshots:
   mime@3.0.0: {}
 
   mime@4.0.7: {}
+
+  mimetext@3.0.27:
+    dependencies:
+      "@babel/runtime": 7.27.6
+      "@babel/runtime-corejs3": 7.28.2
+      js-base64: 3.7.7
+      mime-types: 2.1.35
 
   mimic-fn@2.1.0: {}
 
